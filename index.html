@@ -1501,15 +1501,16 @@
       </div>
 
       <!-- Feedback Form -->
-      <form id="feedback-form" onsubmit="submitForm(event, 'feedback-success')">
+      <form id="feedback-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="submitForm(event, 'feedback-success')">
+        <input type="hidden" name="access_key" value="0462d6a0-edfc-47f3-9c1e-a3db5542b6c2">
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="fb-name">Your Name</label>
-            <input class="form-input" type="text" id="fb-name" placeholder="Adithya" required>
+            <input class="form-input" type="text" id="fb-name" name="name" placeholder="Adithya" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="fb-type">Type</label>
-            <select class="form-select" id="fb-type">
+            <select class="form-select" id="fb-type" name="type">
               <option value="feedback">General Feedback</option>
               <option value="suggestion">App Suggestion</option>
               <option value="bug">Bug Report</option>
@@ -1519,15 +1520,15 @@
         </div>
         <div class="form-group">
           <label class="form-label" for="fb-subject">Subject</label>
-          <input class="form-input" type="text" id="fb-subject" placeholder="What's on your mind?" required>
+          <input class="form-input" type="text" id="fb-subject" name="subject" placeholder="What's on your mind?" required>
         </div>
         <div class="form-group">
           <label class="form-label" for="fb-msg">Message</label>
-          <textarea class="form-textarea" id="fb-msg" placeholder="Describe your idea or feedback in detail…" required></textarea>
+          <textarea class="form-textarea" id="fb-msg" name="message" placeholder="Describe your idea or feedback in detail…" required></textarea>
         </div>
         <div class="form-group">
           <label class="form-label" for="fb-email">Email (optional)</label>
-          <input class="form-input" type="email" id="fb-email" placeholder="you@example.com">
+          <input class="form-input" type="email" id="fb-email" name="email" placeholder="you@example.com">
         </div>
         <button type="submit" class="btn-submit">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1627,20 +1628,22 @@
           <div class="contact-box">
             <h4>Send a Message</h4>
             <p class="sub">Direct line to me — I'll reply as soon as I can.</p>
-            <form id="contact-form" onsubmit="submitForm(event, 'contact-success')">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="submitForm(event, 'contact-success')">
+              <input type="hidden" name="access_key" value="0462d6a0-edfc-47f3-9c1e-a3db5542b6c2">
+              <input type="hidden" name="subject" value="Message from Adithya’s Dev Store">
               <div class="form-row" style="margin-bottom:16px;">
                 <div class="form-group" style="margin:0">
                   <label class="form-label" for="c-name">Name</label>
-                  <input class="form-input" type="text" id="c-name" placeholder="Your name" required>
+                  <input class="form-input" type="text" id="c-name" name="name" placeholder="Your name" required>
                 </div>
                 <div class="form-group" style="margin:0">
                   <label class="form-label" for="c-email">Email</label>
-                  <input class="form-input" type="email" id="c-email" placeholder="you@example.com" required>
+                  <input class="form-input" type="email" id="c-email" name="email" placeholder="you@example.com" required>
                 </div>
               </div>
               <div class="form-group">
                 <label class="form-label" for="c-msg">Message</label>
-                <textarea class="form-textarea" id="c-msg" placeholder="What would you like to say?" required style="min-height:100px"></textarea>
+                <textarea class="form-textarea" id="c-msg" name="message" placeholder="What would you like to say?" required style="min-height:100px"></textarea>
               </div>
               <button type="submit" class="btn-submit">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1684,7 +1687,7 @@
         <p class="app-modal-long" id="app-modal-long">Add text, images or voice notes, and set your reminders </p>
       </div>
       <div class="app-modal-screenshots">
-        <div class="app-modal-section-label">Screenshots · up to 3</div>
+        <div class="app-modal-section-label">Screenshots · </div>
         <div class="app-screenshot-strip" id="app-modal-screenshot-strip" aria-label="App screenshots">
           <div class="app-screenshot-card app-screenshot-card--portrait">
             <img class="app-screenshot-image" id="app-screenshot-1" alt="Screenshot 1" loading="lazy" />
@@ -2181,14 +2184,39 @@
       }
     });
 
-    // ─── Form submit (UI-only — wire to backend/email service as needed) ───
-    function submitForm(e, successId) {
+    // ─── Form submit (Web3Forms) ───
+    async function submitForm(e, successId) {
       e.preventDefault();
       const form = e.target;
       const success = document.getElementById(successId);
-      success.style.display = 'block';
-      form.reset();
-      setTimeout(() => { success.style.display = 'none'; }, 4000);
+      const submitButton = form.querySelector('button[type="submit"]');
+
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method || 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form)
+        });
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || 'Submission failed');
+        }
+
+        success.style.display = 'block';
+        form.reset();
+        setTimeout(() => { success.style.display = 'none'; }, 4000);
+      } catch (error) {
+        alert('Sorry, your message could not be sent right now. Please try again.');
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      }
     }
   </script>
 
