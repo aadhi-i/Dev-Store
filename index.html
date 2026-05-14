@@ -653,6 +653,13 @@
       color: var(--gray);
     }
 
+    .coffee-qr-placeholder img {
+      width: min(180px, 100%);
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
     .coffee-qr-placeholder strong {
       font-family: 'Syne', sans-serif;
       font-size: 1rem;
@@ -1078,24 +1085,26 @@
       .creator-links { flex-direction: column; flex-wrap: nowrap; }
       .creator-link, .creator-link.creator-link-coffee { width: 100%; justify-content: center; }
       .contact-box { padding: 24px; }
-      .app-modal { padding: 18px; }
-      .app-modal-panel { width: min(360px, calc(100vw - 28px)); padding: 16px 14px 14px; max-height: calc(100vh - 36px); border-radius: 18px; }
-      .app-modal-hero { flex-direction: column; padding-right: 42px; gap: 12px; }
-      .app-modal-icon { width: 60px; height: 60px; font-size: 1.6rem; }
-      .app-modal-close { top: 14px; right: 14px; }
-      .app-modal-copy { gap: 8px; margin-bottom: 16px; }
-      .app-modal-short { font-size: 0.74rem; }
-      .app-modal-long { font-size: 0.9rem; line-height: 1.65; }
-      .app-modal-screenshots { margin-top: 12px; margin-bottom: 16px; }
-      .app-screenshot-card--portrait { flex-basis: 64vw; min-width: 64vw; }
-      .app-screenshot-card--landscape { flex-basis: 84vw; min-width: 84vw; }
-      .coffee-modal { padding: 18px; }
-      .coffee-modal-panel { width: min(360px, 100%); padding: 20px 16px 16px; max-height: calc(100vh - 36px); border-radius: 18px; }
-      .coffee-modal-header { padding-right: 42px; }
-      .coffee-modal-close { top: 14px; right: 14px; }
-      .coffee-modal-copy { font-size: 0.78rem; }
-      .coffee-qr-placeholder { padding: 20px; }
-      .coffee-upi-box { padding: 14px; }
+      .app-modal { padding: 12px; }
+      .app-modal-panel { width: min(330px, calc(100vw - 24px)); padding: 14px 12px 12px; max-height: calc(100vh - 28px); border-radius: 16px; }
+      .app-modal-hero { flex-direction: column; padding-right: 36px; gap: 8px; margin-bottom: 12px; }
+      .app-modal-icon { width: 52px; height: 52px; font-size: 1.4rem; }
+      .app-modal-close { top: 12px; right: 12px; }
+      .app-modal-copy { gap: 5px; margin-bottom: 10px; }
+      .app-modal-short { font-size: 0.72rem; }
+      .app-modal-long { font-size: 0.84rem; line-height: 1.5; }
+      .app-modal-screenshots { margin-top: 8px; margin-bottom: 10px; }
+      .app-screenshot-strip { gap: 6px; }
+      .app-screenshot-card--portrait { flex-basis: 42vw; min-width: 42vw; aspect-ratio: 4 / 5; }
+      .app-screenshot-card--landscape { flex-basis: 62vw; min-width: 62vw; }
+      .coffee-modal { padding: 12px; }
+      .coffee-modal-panel { width: min(330px, calc(100vw - 24px)); padding: 16px 14px 14px; max-height: calc(100vh - 28px); border-radius: 16px; }
+      .coffee-modal-header { padding-right: 36px; }
+      .coffee-modal-close { top: 12px; right: 12px; }
+      .coffee-modal-copy { font-size: 0.76rem; }
+      .coffee-qr-placeholder { padding: 18px; }
+      .coffee-qr-placeholder img { width: min(140px, 100%); }
+      .coffee-upi-box { padding: 12px; }
       .form-group { margin-bottom: 18px; }
       .contact-box { padding: 20px; }
       .form-input, .form-textarea, .form-select { padding: 12px 14px; }
@@ -1109,10 +1118,26 @@
       .hero, .apps-grid, .section-label { padding-left: 20px; padding-right: 20px; }
       .page-inner { padding-left: 20px; padding-right: 20px; }
       footer { padding-left: 20px; padding-right: 20px; }
-      .app-modal { padding: 12px; }
-      .app-modal-panel { width: min(320px, calc(100vw - 24px)); padding: 14px 12px 12px; max-height: calc(100vh - 24px); }
-      .coffee-modal { padding: 12px; }
-      .coffee-modal-panel { width: min(300px, calc(100vw - 24px)); padding: 16px 12px 12px; max-height: calc(100vh - 24px); }
+      .app-modal { padding: 10px; }
+      .app-modal-panel { width: min(280px, calc(100vw - 20px)); padding: 12px 10px 10px; max-height: calc(100vh - 20px); }
+      .app-modal-hero { padding-right: 32px; gap: 6px; margin-bottom: 10px; }
+      .app-modal-icon { width: 48px; height: 48px; font-size: 1.3rem; }
+      .app-modal-close { top: 10px; right: 10px; }
+      .app-modal-copy { gap: 4px; margin-bottom: 8px; }
+      .app-modal-short { font-size: 0.7rem; }
+      .app-modal-long { font-size: 0.8rem; line-height: 1.45; }
+      .app-modal-screenshots { margin-top: 6px; margin-bottom: 8px; }
+      .app-screenshot-strip { gap: 5px; }
+      .app-screenshot-card--portrait { flex-basis: 34vw; min-width: 34vw; aspect-ratio: 4 / 5; }
+      .app-screenshot-card--landscape { flex-basis: 54vw; min-width: 54vw; }
+      .coffee-modal { padding: 10px; }
+      .coffee-modal-panel { width: min(270px, calc(100vw - 20px)); padding: 14px 10px 10px; max-height: calc(100vh - 20px); }
+      .coffee-modal-header { padding-right: 32px; }
+      .coffee-modal-close { top: 10px; right: 10px; }
+      .coffee-modal-copy { font-size: 0.74rem; }
+      .coffee-qr-placeholder { padding: 16px; }
+      .coffee-qr-placeholder img { width: min(115px, 100%); }
+      .coffee-upi-box { padding: 10px; }
       .nav-links a {
         font-size: 0.62rem;
         padding: 5px 8px;
@@ -1145,13 +1170,13 @@
       }
 
       .app-screenshot-card--portrait {
-        flex-basis: 78vw;
-        min-width: 78vw;
+        flex-basis: 66vw;
+        min-width: 66vw;
       }
 
       .app-screenshot-card--landscape {
-        flex-basis: 92vw;
-        min-width: 92vw;
+        flex-basis: 82vw;
+        min-width: 82vw;
       }
     }
   </style>
@@ -1549,28 +1574,21 @@
 
           <div class="creator-links">
             <!-- Update each href to your actual profile links -->
-            <a href="#" class="creator-link" target="_blank">
+            <a href="https://github.com/aadhi-i/" class="creator-link" target="_blank">
               <!-- GitHub -->
               <svg class="creator-link-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/>
               </svg>
               GitHub
             </a>
-            <a href="#" class="creator-link" target="_blank">
+            <a href="https://x.com/adithyasnair33" class="creator-link" target="_blank">
               <!-- Twitter/X -->
               <svg class="creator-link-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
               X / Twitter
             </a>
-            <a href="mailto:your@email.com" class="creator-link">
-              <!-- Email -->
-              <svg class="creator-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-              </svg>
-              Email Me
-            </a>
-            <a href="#" class="creator-link" target="_blank">
+            <a href="https://www.linkedin.com/in/adithya-s-nair33/" class="creator-link" target="_blank">
               <!-- LinkedIn or any other link -->
               <svg class="creator-link-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
@@ -1702,12 +1720,11 @@
       <p class="coffee-modal-copy" id="coffee-modal-desc">Scan the placeholder QR code or use the UPI ID below.</p>
       <div class="coffee-modal-grid">
         <div class="coffee-qr-placeholder">
-          <strong>GPay QR Code</strong>
-          <span>Placeholder area for your Google Pay QR image.</span>
+          <img src="upi.jpeg" alt="Gpay">
         </div>
         <div class="coffee-upi-box">
           <label>UPI ID</label>
-          <div class="coffee-upi-value">your-upi-id@upi</div>
+          <div class="coffee-upi-value">adithyasnair2033-1@okicici</div>
         </div>
       </div>
     </div>
