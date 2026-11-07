@@ -262,6 +262,15 @@
       margin: auto;
     }
 
+    .app-icon--fill, .app-modal-icon--fill { overflow: hidden; }
+
+    .app-icon--fill img,
+    .app-modal-icon--fill img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .app-meta { flex: 1; min-width: 0; }
 
     .app-name {
@@ -535,11 +544,63 @@
       aspect-ratio: 16 / 10;
     }
 
+    .app-screenshot-card[hidden] { display: none; }
+
     .app-screenshot-image {
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
+    }
+
+    .app-modal-install {
+      margin-bottom: 22px;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--section-alt);
+    }
+
+    .app-modal-install[hidden] { display: none; }
+
+    .app-modal-install-steps {
+      list-style: none;
+      counter-reset: install;
+      display: grid;
+      gap: 10px;
+    }
+
+    .app-modal-install-steps li {
+      counter-increment: install;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: var(--black);
+    }
+
+    .app-modal-install-steps li::before {
+      content: counter(install);
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--red);
+      color: #fff;
+      font-size: 0.68rem;
+      display: grid;
+      place-items: center;
+      margin-top: 1px;
+    }
+
+    .app-modal-install-note {
+      margin-top: 12px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      line-height: 1.6;
+      color: var(--gray);
     }
 
     .app-modal-footer {
@@ -1245,6 +1306,32 @@
       </div>
       <!-- ══════ END APP TILE #1 ══════ -->
 
+      <!-- ══════ APP TILE #2 — Bankai (Web App, installed via Chrome) ══════ -->
+      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Bankai details" data-app-kind="web">
+        <div class="app-tile-header">
+          <div class="app-icon app-icon--fill">
+            <img src="Bankai.jpeg" alt="Bankai app icon" />
+          </div>
+          <div class="app-meta">
+            <div class="app-name">Bankai</div>
+            <div class="app-tag">Fitness · Web App</div>
+          </div>
+        </div>
+        <p class="app-desc">
+          Fitness tracker to log your workouts, track progress and stay consistent.
+        </p>
+        <div class="app-tile-footer">
+          <span class="app-version">Live</span>
+          <a href="https://aadhi-i.github.io/Bankai-Workout-Tracker/" target="_blank" rel="noopener noreferrer" class="btn-download btn-visit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            Open
+          </a>
+        </div>
+      </div>
+      <!-- ══════ END APP TILE #2 ══════ -->
+
 
       <!-- ══════ FUTURE APP TILES (3 x 3) ══════
       Popup note: edit the popup copy once in APP_LIBRARY below. These are just tile templates.
@@ -1700,6 +1787,11 @@
           </div>
         </div>
       </div>
+      <div class="app-modal-install" id="app-modal-install" hidden>
+        <div class="app-modal-section-label" id="app-modal-install-label">How to install</div>
+        <ol class="app-modal-install-steps" id="app-modal-install-steps"></ol>
+        <p class="app-modal-install-note" id="app-modal-install-note"></p>
+      </div>
       <div class="app-modal-footer">
         <a href="assets/appname.apk" download="AppName.apk" class="btn-download modal-action">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1784,6 +1876,32 @@
         ],
         actionHref: 'NDate.apk',
         actionDownload: 'NDate.apk'
+      },
+      bankai: {
+        icon: 'Bankai.jpeg',
+        iconFill: true,
+        title: 'Bankai',
+        tag: 'Fitness · Web App',
+        version: 'Live',
+        shortDescription: 'Fitness tracker to log your workouts, track progress and stay consistent.',
+        longDescription: 'Bankai is a fitness tracker built to keep you consistent. Log your workouts, keep an eye on your progress over time, and stay motivated with a clean, no-nonsense interface.',
+        screenshots: [
+          { src: 'bk-ss1.jpeg', title: 'Screenshot 1', orientation: 'portrait' },
+          { src: 'bk-ss2.jpeg', title: 'Screenshot 2', orientation: 'portrait' }
+        ],
+        installTitle: 'How to install on Android (Chrome)',
+        installSteps: [
+          'Open the Bankai link in Google Chrome.',
+          'Tap the three-dot menu (⋮) in the top-right corner of Chrome.',
+          'Tap “Install app” (or “Add to Home screen” if you don’t see it).',
+          'Tap “Install” to confirm.',
+          'Open Bankai from your home screen or app drawer, just like any other app.'
+        ],
+        installNote: 'On desktop Chrome, click the install icon in the address bar and choose Install.',
+        actionLabel: 'Open',
+        actionHref: 'https://aadhi-i.github.io/Bankai-Workout-Tracker/',
+        actionTarget: '_blank',
+        actionRel: 'noopener noreferrer'
       },
       'future-app-2': {
         icon: '📦',
@@ -1974,7 +2092,14 @@
       const screenshotCards = appModalScreenshotStrip.querySelectorAll('.app-screenshot-card');
       const screenshotImages = appModalScreenshotStrip.querySelectorAll('.app-screenshot-image');
 
+      const hasOwnScreenshots = Array.isArray(appContent?.screenshots) && appContent.screenshots.length > 0;
+
       screenshotCards.forEach((card, index) => {
+        if (hasOwnScreenshots && !screenshots[index]) {
+          card.hidden = true;
+          return;
+        }
+        card.hidden = false;
         const screenshot = screenshots[index] || DEFAULT_APP_SCREENSHOTS[index] || DEFAULT_APP_SCREENSHOTS[0];
         const orientation = screenshot?.orientation === 'portrait' ? 'portrait' : 'landscape';
         card.classList.remove('app-screenshot-card--portrait', 'app-screenshot-card--landscape');
@@ -2017,6 +2142,10 @@
     const appModalShort = document.getElementById('app-modal-short');
     const appModalLong = document.getElementById('app-modal-long');
     const appModalScreenshotStrip = document.getElementById('app-modal-screenshot-strip');
+    const appModalInstall = document.getElementById('app-modal-install');
+    const appModalInstallLabel = document.getElementById('app-modal-install-label');
+    const appModalInstallSteps = document.getElementById('app-modal-install-steps');
+    const appModalInstallNote = document.getElementById('app-modal-install-note');
     const appModalAction = appModal.querySelector('.modal-action');
     const appModalClose = appModal.querySelector('[data-modal-close]');
     let lastFocusedElement = null;
@@ -2039,7 +2168,9 @@
         modalIconImage.src = iconSrc;
         modalIconImage.alt = appContent?.title ? `${appContent.title} icon` : 'App icon';
         appModalIcon.appendChild(modalIconImage);
+        appModalIcon.classList.toggle('app-modal-icon--fill', !!appContent?.iconFill);
       } else {
+        appModalIcon.classList.remove('app-modal-icon--fill');
         appModalIcon.textContent = appContent?.icon || (icon ? icon.textContent.trim() : '');
       }
       appModalTitle.textContent = appContent?.title || (name ? name.textContent.trim() : 'App details');
@@ -2049,10 +2180,28 @@
       appModalLong.textContent = appContent?.longDescription || tile.dataset.detailDesc || (shortDescription ? shortDescription.textContent.trim() : '');
       renderAppScreenshots(appContent);
 
+      const installSteps = Array.isArray(appContent?.installSteps) ? appContent.installSteps : [];
+      appModalInstallSteps.innerHTML = '';
+      installSteps.forEach(text => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        appModalInstallSteps.appendChild(li);
+      });
+      appModalInstallLabel.textContent = appContent?.installTitle || 'How to install';
+      appModalInstallNote.textContent = appContent?.installNote || '';
+      appModalInstall.hidden = installSteps.length === 0;
+
       if (action) {
         appModalAction.innerHTML = action.innerHTML;
         appModalAction.className = action.className;
         appModalAction.classList.add('modal-action');
+
+        if (appContent?.actionLabel) {
+          const svg = action.querySelector('svg');
+          appModalAction.innerHTML = '';
+          if (svg) appModalAction.appendChild(svg.cloneNode(true));
+          appModalAction.appendChild(document.createTextNode(' ' + appContent.actionLabel));
+        }
 
         const actionHref = appContent?.actionHref || action.getAttribute('href') || '#';
         const actionTarget = appContent?.actionTarget || action.getAttribute('target');
