@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare site (only files the page needs)
+        run: |
+          mkdir _site
+          cp index.html _site/
+          # images, icons and downloads referenced by index.html
+          find . -maxdepth 1 -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' \
+            -o -iname '*.webp' -o -iname '*.svg' -o -iname '*.ico' -o -iname '*.apk' \
+            -o -iname 'manifest.json' -o -iname '*.webmanifest' \) -exec cp {} _site/ \;
+          echo "Largest files going to Pages:"
+          du -ah _site | sort -rh | head -15
+          SIZE_MB=$(du -sm _site | cut -f1)
+          echo "Total site size: ${SIZE_MB} MB"
+          if [ "$SIZE_MB" -gt 100 ]; then
+            echo "::error::Site is ${SIZE_MB} MB. Move big files (APKs) to GitHub Releases."
+            exit 1
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
