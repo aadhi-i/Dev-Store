@@ -63,9 +63,7 @@
       gap: 8px;
     }
 
-    .nav-logo span {
-      color: var(--red);
-    }
+    .nav-logo span { color: var(--red); }
 
     .nav-links {
       display: flex;
@@ -219,14 +217,7 @@
       border-color: rgba(232,24,12,0.2);
     }
 
-    .app-tile:hover::before {
-      transform: scaleX(1);
-    }
-    .app-tile:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(232, 24, 12, 0.18), 0 8px 32px rgba(0,0,0,0.1);
-      border-color: rgba(232,24,12,0.35);
-    }
+    .app-tile:hover::before { transform: scaleX(1); }
 
     .app-tile:focus-visible {
       outline: none;
@@ -352,7 +343,6 @@
       color: #fff;
     }
 
-    /* Placeholder "coming soon" tile */
     .app-tile.coming-soon {
       opacity: 0.5;
       pointer-events: none;
@@ -360,9 +350,7 @@
     }
 
     /* ─── APP MODAL ─── */
-    body.modal-open {
-      overflow: hidden;
-    }
+    body.modal-open { overflow: hidden; }
 
     .app-modal {
       position: fixed;
@@ -376,9 +364,7 @@
       backdrop-filter: blur(10px);
     }
 
-    .app-modal[hidden] {
-      display: none;
-    }
+    .app-modal[hidden] { display: none; }
 
     .app-modal-panel {
       position: relative;
@@ -437,10 +423,7 @@
       flex-shrink: 0;
     }
 
-    .app-modal-meta {
-      flex: 1;
-      min-width: 0;
-    }
+    .app-modal-meta { flex: 1; min-width: 0; }
 
     .app-modal-name {
       font-weight: 800;
@@ -513,7 +496,7 @@
       background: var(--border);
     }
 
-    /* Web apps only: keep this strip horizontally scrollable so landscape screenshots can be swiped. */
+    /* Keep this strip horizontally scrollable so landscape screenshots can be swiped. */
     .app-screenshot-strip {
       display: flex;
       gap: 14px;
@@ -622,9 +605,7 @@
       backdrop-filter: blur(10px);
     }
 
-    .coffee-modal[hidden] {
-      display: none;
-    }
+    .coffee-modal[hidden] { display: none; }
 
     .coffee-modal-panel {
       position: relative;
@@ -766,9 +747,7 @@
       padding: 72px 48px 80px;
     }
 
-    .page-header {
-      margin-bottom: 52px;
-    }
+    .page-header { margin-bottom: 52px; }
 
     .page-header .eyebrow {
       font-family: 'DM Mono', monospace;
@@ -812,9 +791,7 @@
     }
 
     /* ─── FORM ─── */
-    .form-group {
-      margin-bottom: 24px;
-    }
+    .form-group { margin-bottom: 24px; }
 
     .form-label {
       display: block;
@@ -1086,10 +1063,7 @@
         gap: 10px;
       }
 
-      .nav-logo {
-        font-size: 1rem;
-        line-height: 1.1;
-      }
+      .nav-logo { font-size: 1rem; line-height: 1.1; }
 
       .nav-links {
         width: 100%;
@@ -1098,26 +1072,17 @@
         gap: 4px;
       }
 
-      .nav-links a {
-        padding: 6px 10px;
-        font-size: 0.65rem;
-      }
+      .nav-links a { padding: 6px 10px; font-size: 0.65rem; }
 
       .page { padding-top: 112px; }
 
-      .hero {
-        padding: 36px 24px 28px;
-      }
+      .hero { padding: 36px 24px 28px; }
 
       .hero, .apps-grid, .section-label { padding-left: 24px; padding-right: 24px; }
 
-      .hero h1 {
-        font-size: clamp(2.15rem, 10vw, 3rem);
-      }
+      .hero h1 { font-size: clamp(2.15rem, 10vw, 3rem); }
 
-      .hero-sub {
-        font-size: 0.78rem;
-      }
+      .hero-sub { font-size: 0.78rem; }
 
       .apps-grid {
         grid-template-columns: 1fr;
@@ -1199,46 +1164,25 @@
       .coffee-qr-placeholder { padding: 16px; }
       .coffee-qr-placeholder img { width: min(115px, 100%); }
       .coffee-upi-box { padding: 10px; }
-      .nav-links a {
-        font-size: 0.62rem;
-        padding: 5px 8px;
-      }
+      .nav-links a { font-size: 0.62rem; padding: 5px 8px; }
 
       .page { padding-top: 116px; }
 
-      .hero {
-        padding-top: 30px;
-      }
+      .hero { padding-top: 30px; }
 
-      .hero h1 {
-        font-size: clamp(2rem, 11vw, 2.6rem);
-      }
+      .hero h1 { font-size: clamp(2rem, 11vw, 2.6rem); }
 
-      .page-header h2 {
-        font-size: clamp(1.8rem, 9vw, 2.4rem);
-      }
+      .page-header h2 { font-size: clamp(1.8rem, 9vw, 2.4rem); }
 
-      .page-header p {
-        font-size: 0.76rem;
-      }
+      .page-header p { font-size: 0.76rem; }
 
-      .btn-submit, .btn-download, .creator-link, .creator-link.creator-link-coffee {
-        font-size: 0.66rem;
-      }
+      .btn-submit, .btn-download, .creator-link, .creator-link.creator-link-coffee { font-size: 0.66rem; }
 
-      .coffee-modal-title {
-        font-size: clamp(1.35rem, 7vw, 1.65rem);
-      }
+      .coffee-modal-title { font-size: clamp(1.35rem, 7vw, 1.65rem); }
 
-      .app-screenshot-card--portrait {
-        flex-basis: 66vw;
-        min-width: 66vw;
-      }
+      .app-screenshot-card--portrait { flex-basis: 66vw; min-width: 66vw; }
 
-      .app-screenshot-card--landscape {
-        flex-basis: 82vw;
-        min-width: 82vw;
-      }
+      .app-screenshot-card--landscape { flex-basis: 82vw; min-width: 82vw; }
     }
   </style>
 </head>
@@ -1279,8 +1223,8 @@
     <div class="apps-grid">
 
       <!-- ══════ APP TILE #1 — Desktop/Mobile App ══════ -->
-      <!-- To add a new app: copy this entire .app-tile block and update the visible text. Popup copy is edited once in the APP_LIBRARY block below. -->
-      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open AppName details" data-detail-desc="Use this space for a fuller app description. Explain who the app is for, the core workflow, and the main benefit in two or three sentences." data-app-kind="desktop">
+      <!-- To add a new app: copy an entire .app-tile block and update the visible text. Popup copy is edited once in the APP_LIBRARY block below (key = app name lowercased, spaces → hyphens). -->
+      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open NDate details" data-app-kind="desktop">
         <div class="app-tile-header">
           <div class="app-icon">
             <img src="NDate.png" alt="NDate app icon" />
@@ -1296,7 +1240,6 @@
         <div class="app-tile-footer">
           <span class="app-version">v1.0.0</span>
           <a href="https://github.com/aadhi-i/Nothing-Calendar/releases/download/NDate/NDate.apk" download="NDate.apk" class="btn-download">
-            <!-- Replace this path with the actual APK filename or URL -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 3v13M5 16l7 7 7-7"/><line x1="3" y1="22" x2="21" y2="22"/>
             </svg>
@@ -1332,238 +1275,31 @@
       </div>
       <!-- ══════ END APP TILE #2 ══════ -->
 
-
-      <!-- ══════ FUTURE APP TILES (3 x 3) ══════
-      Popup note: edit the popup copy once in APP_LIBRARY below. These are just tile templates.
-
-      Row 1
-      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Future App 2 details" data-detail-desc="Add a longer description for Future App 2 here. Mention the workflow, benefit, and any standout feature." data-app-kind="desktop">
+      <!-- ══════ APP TILE #3 — Goat AI (Web App, installed via Chrome/Safari) ══════ -->
+      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Goat AI details" data-app-kind="web">
         <div class="app-tile-header">
-          <div class="app-icon">📦</div>
+          <div class="app-icon app-icon--fill">
+            <img src="goat.jpeg" alt="Goat AI app icon" />
+          </div>
           <div class="app-meta">
-            <div class="app-name">Future App 2</div>
-            <div class="app-tag">Utility · Android</div>
+            <div class="app-name">Goat AI</div>
+            <div class="app-tag">AI · Web App</div>
           </div>
         </div>
         <p class="app-desc">
-          Short summary placeholder for Future App 2.
+          AI assistant with chat history, image generation, voice and file analysis.
         </p>
         <div class="app-tile-footer">
-          <span class="app-version">v0.0.0</span>
-          <a href="assets/future-app-2.apk" download="Future-App-2.apk" class="btn-download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v13M5 16l7 7 7-7"/><line x1="3" y1="22" x2="21" y2="22"/>
-            </svg>
-            Download
-          </a>
-        </div>
-      </div>
-
-      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Future App 3 details" data-detail-desc="Add a longer description for Future App 3 here. Mention the workflow, benefit, and any standout feature." data-app-kind="desktop">
-        <div class="app-tile-header">
-          <div class="app-icon">🔒</div>
-          <div class="app-meta">
-            <div class="app-name">Future App 3</div>
-            <div class="app-tag">Security · Android</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Short summary placeholder for Future App 3.
-        </p>
-        <div class="app-tile-footer">
-          <span class="app-version">v0.0.0</span>
-          <a href="assets/future-app-3.apk" download="Future-App-3.apk" class="btn-download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v13M5 16l7 7 7-7"/><line x1="3" y1="22" x2="21" y2="22"/>
-            </svg>
-            Download
-          </a>
-        </div>
-      </div>
-
-      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Future App 4 details" data-detail-desc="Add a longer description for Future App 4 here. Mention the workflow, benefit, and any standout feature." data-app-kind="desktop">
-        <div class="app-tile-header">
-          <div class="app-icon">⚡</div>
-          <div class="app-meta">
-            <div class="app-name">Future App 4</div>
-            <div class="app-tag">Performance · Android</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Short summary placeholder for Future App 4.
-        </p>
-        <div class="app-tile-footer">
-          <span class="app-version">v0.0.0</span>
-          <a href="assets/future-app-4.apk" download="Future-App-4.apk" class="btn-download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v13M5 16l7 7 7-7"/><line x1="3" y1="22" x2="21" y2="22"/>
-            </svg>
-            Download
-          </a>
-        </div>
-      </div>
-
-      Row 2
-      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Future App 5 details" data-detail-desc="Add a longer description for Future App 5 here. Mention the workflow, benefit, and any standout feature." data-app-kind="desktop">
-        <div class="app-tile-header">
-          <div class="app-icon">🎯</div>
-          <div class="app-meta">
-            <div class="app-name">Future App 5</div>
-            <div class="app-tag">Productivity · Android</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Short summary placeholder for Future App 5.
-        </p>
-        <div class="app-tile-footer">
-          <span class="app-version">v0.0.0</span>
-          <a href="assets/future-app-5.apk" download="Future-App-5.apk" class="btn-download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v13M5 16l7 7 7-7"/><line x1="3" y1="22" x2="21" y2="22"/>
-            </svg>
-            Download
-          </a>
-        </div>
-      </div>
-
-      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Future App 6 details" data-detail-desc="Add a longer description for Future App 6 here. Mention the workflow, benefit, and any standout feature." data-app-kind="desktop">
-        <div class="app-tile-header">
-          <div class="app-icon">🧭</div>
-          <div class="app-meta">
-            <div class="app-name">Future App 6</div>
-            <div class="app-tag">Navigation · Android</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Short summary placeholder for Future App 6.
-        </p>
-        <div class="app-tile-footer">
-          <span class="app-version">v0.0.0</span>
-          <a href="assets/future-app-6.apk" download="Future-App-6.apk" class="btn-download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v13M5 16l7 7 7-7"/><line x1="3" y1="22" x2="21" y2="22"/>
-            </svg>
-            Download
-          </a>
-        </div>
-      </div>
-
-      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Future App 7 details" data-detail-desc="Add a longer description for Future App 7 here. Mention the workflow, benefit, and any standout feature." data-app-kind="desktop">
-        <div class="app-tile-header">
-          <div class="app-icon">🧪</div>
-          <div class="app-meta">
-            <div class="app-name">Future App 7</div>
-            <div class="app-tag">Labs · Android</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Short summary placeholder for Future App 7.
-        </p>
-        <div class="app-tile-footer">
-          <span class="app-version">v0.0.0</span>
-          <a href="assets/future-app-7.apk" download="Future-App-7.apk" class="btn-download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v13M5 16l7 7 7-7"/><line x1="3" y1="22" x2="21" y2="22"/>
-            </svg>
-            Download
-          </a>
-        </div>
-      </div>
-
-      Row 3
-      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Future App 8 details" data-detail-desc="Add a longer description for Future App 8 here. Mention the workflow, benefit, and any standout feature." data-app-kind="desktop">
-        <div class="app-tile-header">
-          <div class="app-icon">🎵</div>
-          <div class="app-meta">
-            <div class="app-name">Future App 8</div>
-            <div class="app-tag">Media · Android</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Short summary placeholder for Future App 8.
-        </p>
-        <div class="app-tile-footer">
-          <span class="app-version">v0.0.0</span>
-          <a href="assets/future-app-8.apk" download="Future-App-8.apk" class="btn-download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v13M5 16l7 7 7-7"/><line x1="3" y1="22" x2="21" y2="22"/>
-            </svg>
-            Download
-          </a>
-        </div>
-      </div>
-
-      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Future App 9 details" data-detail-desc="Add a longer description for Future App 9 here. Mention the workflow, benefit, and any standout feature." data-app-kind="desktop">
-        <div class="app-tile-header">
-          <div class="app-icon">🖼️</div>
-          <div class="app-meta">
-            <div class="app-name">Future App 9</div>
-            <div class="app-tag">Creative · Android</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Short summary placeholder for Future App 9.
-        </p>
-        <div class="app-tile-footer">
-          <span class="app-version">v0.0.0</span>
-          <a href="assets/future-app-9.apk" download="Future-App-9.apk" class="btn-download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v13M5 16l7 7 7-7"/><line x1="3" y1="22" x2="21" y2="22"/>
-            </svg>
-            Download
-          </a>
-        </div>
-      </div>
-
-      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Future App 10 details" data-detail-desc="Add a longer description for Future App 10 here. Mention the workflow, benefit, and any standout feature." data-app-kind="desktop">
-        <div class="app-tile-header">
-          <div class="app-icon">🧰</div>
-          <div class="app-meta">
-            <div class="app-name">Future App 10</div>
-            <div class="app-tag">Tools · Android</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Short summary placeholder for Future App 10.
-        </p>
-        <div class="app-tile-footer">
-          <span class="app-version">v0.0.0</span>
-          <a href="assets/future-app-10.apk" download="Future-App-10.apk" class="btn-download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v13M5 16l7 7 7-7"/><line x1="3" y1="22" x2="21" y2="22"/>
-            </svg>
-            Download
-          </a>
-        </div>
-      </div>
-      ══════ END FUTURE APP TILES ══════ -->
-
-
-      <!-- Web apps can use the popup screenshot strip below; keep it horizontally scrollable for landscape captures. -->
-      <!-- ══════ WEB APP TILE — COMMENTED OUT FOR FUTURE USE ══════
-      <div class="app-tile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open WebAppName details" data-detail-desc="Use this longer description to explain how the web app works, what problem it solves, and why it is better than the shorter tile copy." data-app-kind="web">
-        <div class="app-tile-header">
-          <div class="app-icon">🌐</div>
-          <div class="app-meta">
-            <div class="app-name">WebAppName</div>
-            <div class="app-tag">Web App · Browser</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Short description of this web application and what problem it solves for the user.
-        </p>
-        <div class="app-tile-footer">
-          <span class="app-version">Live</span>
-          <a href="https://your-web-app-url.com" target="_blank" rel="noopener noreferrer" class="btn-download btn-visit">
+          <span class="app-version">v3.0</span>
+          <a href="https://your-goat-ai-url.com" target="_blank" rel="noopener noreferrer" class="btn-download btn-visit">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
             </svg>
-            Visit
+            Open
           </a>
         </div>
       </div>
-      ══════ END WEB APP TILE ══════ -->
-
+      <!-- ══════ END APP TILE #3 ══════ -->
 
     </div><!-- /apps-grid -->
 
@@ -1587,7 +1323,6 @@
         <p>Got an idea for a new app, or something to improve? Drop it here — I read every message.</p>
       </div>
 
-      <!-- Feedback Form -->
       <form id="feedback-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="submitForm(event, 'feedback-success')">
         <input type="hidden" name="access_key" value="0462d6a0-edfc-47f3-9c1e-a3db5542b6c2">
         <div class="form-row">
@@ -1650,34 +1385,27 @@
 
       <div class="creator-layout">
 
-        <!-- Avatar + links col -->
         <div class="creator-avatar-col">
           <div class="avatar-ring">
-            <!-- Replace src with your actual image URL, e.g. src="adithya.jpg" -->
             <img src="creator.png" alt="Adithya">
-            <!-- <div class="avatar-placeholder">👤</div> -->
           </div>
           <div class="creator-name">Adithya</div>
           <div class="creator-title">Developer & Builder</div>
 
           <div class="creator-links">
-            <!-- Update each href to your actual profile links -->
             <a href="https://github.com/aadhi-i/" class="creator-link" target="_blank">
-              <!-- GitHub -->
               <svg class="creator-link-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/>
               </svg>
               GitHub
             </a>
             <a href="https://x.com/adithyasnair33" class="creator-link" target="_blank">
-              <!-- Twitter/X -->
               <svg class="creator-link-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
               X / Twitter
             </a>
             <a href="https://www.linkedin.com/in/adithya-s-nair33/" class="creator-link" target="_blank">
-              <!-- LinkedIn or any other link -->
               <svg class="creator-link-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
               </svg>
@@ -1697,10 +1425,8 @@
           </div>
         </div><!-- /avatar col -->
 
-        <!-- Bio + contact col -->
         <div class="creator-info">
           <h3>Hi, I'm Adithya 👋</h3>
-          <!-- Replace this paragraph with your actual bio -->
           <p>
             I build apps and tools that solve real problems — the kind of things I wish existed. Whether it's a small utility or a full-blown app, I put genuine care into everything I ship.
           </p>
@@ -1711,7 +1437,6 @@
             Have an idea, want to collaborate, or just want to say hi? Use the form below or reach out on any of the links.
           </p>
 
-          <!-- Contact Box -->
           <div class="contact-box">
             <h4>Send a Message</h4>
             <p class="sub">Direct line to me — I'll reply as soon as I can.</p>
@@ -1844,8 +1569,8 @@
       });
     });
 
-    // Edit popup copy, icon images, and screenshot image data here once for the current app and the future templates.
-    // Use icon as an image URL when you have one, and add a screenshots array when you want modal images.
+    // Edit popup copy, icon images, and screenshot data here.
+    // Key = app name lowercased with spaces → hyphens (e.g. "Goat AI" → goat-ai).
     const APP_LIBRARY = {
       ndate: {
         icon: 'NDate.png',
@@ -1855,24 +1580,9 @@
         shortDescription: 'Calendar app for your Nothing Phones. Nothing theme + tons of features!',
         longDescription: 'Add text, images or voice notes, and set your reminders.',
         screenshots: [
-          {
-            src: 'ss1.jpeg',
-            title: 'Screenshot 1',
-            caption: 'Portrait placeholder for the calendar overview.',
-            orientation: 'portrait'
-          },
-          {
-            src: 'ss2.jpeg',
-            title: 'Screenshot 2',
-            caption: 'Portrait placeholder for a detail or settings view.',
-            orientation: 'portrait'
-          },
-          {
-            src: 'ss3.jpeg',
-            title: 'Screenshot 3',
-            caption: 'Landscape placeholder for a wide capture.',
-            orientation: 'landscape'
-          }
+          { src: 'ss1.jpeg', title: 'Screenshot 1', caption: 'Portrait placeholder for the calendar overview.', orientation: 'portrait' },
+          { src: 'ss2.jpeg', title: 'Screenshot 2', caption: 'Portrait placeholder for a detail or settings view.', orientation: 'portrait' },
+          { src: 'ss3.jpeg', title: 'Screenshot 3', caption: 'Landscape placeholder for a wide capture.', orientation: 'landscape' }
         ],
         actionHref: 'https://github.com/aadhi-i/Nothing-Calendar/releases/download/NDate/NDate.apk',
         actionDownload: 'NDate.apk'
@@ -1903,104 +1613,29 @@
         actionTarget: '_blank',
         actionRel: 'noopener noreferrer'
       },
-      'future-app-2': {
-        icon: '📦',
-        title: 'Future App 2',
-        tag: 'Utility · Android',
-        version: 'v0.0.0',
-        shortDescription: 'Short summary placeholder for Future App 2.',
-        longDescription: 'Add a longer description for Future App 2 here. Mention the workflow, benefit, and any standout feature.',
-        actionHref: 'assets/future-app-2.apk',
-        actionDownload: 'Future-App-2.apk'
-      },
-      'future-app-3': {
-        icon: '🔒',
-        title: 'Future App 3',
-        tag: 'Security · Android',
-        version: 'v0.0.0',
-        shortDescription: 'Short summary placeholder for Future App 3.',
-        longDescription: 'Add a longer description for Future App 3 here. Mention the workflow, benefit, and any standout feature.',
-        actionHref: 'assets/future-app-3.apk',
-        actionDownload: 'Future-App-3.apk'
-      },
-      'future-app-4': {
-        icon: '⚡',
-        title: 'Future App 4',
-        tag: 'Performance · Android',
-        version: 'v0.0.0',
-        shortDescription: 'Short summary placeholder for Future App 4.',
-        longDescription: 'Add a longer description for Future App 4 here. Mention the workflow, benefit, and any standout feature.',
-        actionHref: 'assets/future-app-4.apk',
-        actionDownload: 'Future-App-4.apk'
-      },
-      'future-app-5': {
-        icon: '🎯',
-        title: 'Future App 5',
-        tag: 'Productivity · Android',
-        version: 'v0.0.0',
-        shortDescription: 'Short summary placeholder for Future App 5.',
-        longDescription: 'Add a longer description for Future App 5 here. Mention the workflow, benefit, and any standout feature.',
-        actionHref: 'assets/future-app-5.apk',
-        actionDownload: 'Future-App-5.apk'
-      },
-      'future-app-6': {
-        icon: '🧭',
-        title: 'Future App 6',
-        tag: 'Navigation · Android',
-        version: 'v0.0.0',
-        shortDescription: 'Short summary placeholder for Future App 6.',
-        longDescription: 'Add a longer description for Future App 6 here. Mention the workflow, benefit, and any standout feature.',
-        actionHref: 'assets/future-app-6.apk',
-        actionDownload: 'Future-App-6.apk'
-      },
-      'future-app-7': {
-        icon: '🧪',
-        title: 'Future App 7',
-        tag: 'Labs · Android',
-        version: 'v0.0.0',
-        shortDescription: 'Short summary placeholder for Future App 7.',
-        longDescription: 'Add a longer description for Future App 7 here. Mention the workflow, benefit, and any standout feature.',
-        actionHref: 'assets/future-app-7.apk',
-        actionDownload: 'Future-App-7.apk'
-      },
-      'future-app-8': {
-        icon: '🎵',
-        title: 'Future App 8',
-        tag: 'Media · Android',
-        version: 'v0.0.0',
-        shortDescription: 'Short summary placeholder for Future App 8.',
-        longDescription: 'Add a longer description for Future App 8 here. Mention the workflow, benefit, and any standout feature.',
-        actionHref: 'assets/future-app-8.apk',
-        actionDownload: 'Future-App-8.apk'
-      },
-      'future-app-9': {
-        icon: '🖼️',
-        title: 'Future App 9',
-        tag: 'Creative · Android',
-        version: 'v0.0.0',
-        shortDescription: 'Short summary placeholder for Future App 9.',
-        longDescription: 'Add a longer description for Future App 9 here. Mention the workflow, benefit, and any standout feature.',
-        actionHref: 'assets/future-app-9.apk',
-        actionDownload: 'Future-App-9.apk'
-      },
-      'future-app-10': {
-        icon: '🧰',
-        title: 'Future App 10',
-        tag: 'Tools · Android',
-        version: 'v0.0.0',
-        shortDescription: 'Short summary placeholder for Future App 10.',
-        longDescription: 'Add a longer description for Future App 10 here. Mention the workflow, benefit, and any standout feature.',
-        actionHref: 'assets/future-app-10.apk',
-        actionDownload: 'Future-App-10.apk'
-      },
-      webappname: {
-        icon: '🌐',
-        title: 'WebAppName',
-        tag: 'Web App · Browser',
-        version: 'Live',
-        shortDescription: 'Short description of this web application and what problem it solves for the user.',
-        longDescription: 'Use this longer description to explain how the web app works, what problem it solves, and why it is better than the shorter tile copy.',
-        actionHref: 'https://your-web-app-url.com',
+      'goat-ai': {
+        icon: 'goat.jpeg',
+        iconFill: true,
+        title: 'Goat AI',
+        tag: 'AI · Web App',
+        version: 'v3.0',
+        shortDescription: 'AI assistant with chat history, image generation, voice and file analysis.',
+        longDescription: 'Goat AI v3.0 is a full-featured AI assistant. Sign in with your account, keep multiple chats with saved history, generate images, talk to it with voice input and hear replies with voice output, and attach files for it to analyze.',
+        screenshots: [
+          { src: 'goat-ss1.jpeg', title: 'Screenshot 1', orientation: 'portrait' },
+          { src: 'goat-ss2.jpeg', title: 'Screenshot 2', orientation: 'portrait' }
+        ],
+        installTitle: 'How to install on mobile',
+        installSteps: [
+          'Open the Goat AI link in Google Chrome (Android) or Safari (iPhone/iPad).',
+          'Android: tap the three-dot menu (⋮) in the top-right corner, then tap “Install app” (or “Add to Home screen”).',
+          'iPhone/iPad: tap the Share button (square with an arrow) at the bottom of Safari, then tap “Add to Home Screen”.',
+          'Tap “Install” (Android) or “Add” (iOS) to confirm.',
+          'Open Goat AI from your home screen like any other app.'
+        ],
+        installNote: 'On desktop Chrome or Edge, click the install icon in the address bar and choose Install.',
+        actionLabel: 'Open',
+        actionHref: 'https://your-goat-ai-url.com',
         actionTarget: '_blank',
         actionRel: 'noopener noreferrer'
       }
@@ -2030,21 +1665,9 @@
     }
 
     const DEFAULT_APP_SCREENSHOTS = [
-      {
-        title: 'Screenshot 1',
-        caption: 'Portrait placeholder for the app overview.',
-        orientation: 'portrait'
-      },
-      {
-        title: 'Screenshot 2',
-        caption: 'Portrait placeholder for a focused feature view.',
-        orientation: 'portrait'
-      },
-      {
-        title: 'Screenshot 3',
-        caption: 'Landscape placeholder for a wide capture.',
-        orientation: 'landscape'
-      }
+      { title: 'Screenshot 1', caption: 'Portrait placeholder for the app overview.', orientation: 'portrait' },
+      { title: 'Screenshot 2', caption: 'Portrait placeholder for a focused feature view.', orientation: 'portrait' },
+      { title: 'Screenshot 3', caption: 'Landscape placeholder for a wide capture.', orientation: 'landscape' }
     ];
 
     function buildAppScreenshotDataUri(appContent, screenshot, index) {
